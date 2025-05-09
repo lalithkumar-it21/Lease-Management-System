@@ -20,10 +20,17 @@ public class RequestServiceImpl implements RequestService{
 	
 	@Override
 	public String saveRequest(Request request) {
-		repository.save(request);
+	    // Check if a request with the same request ID already exists
+	    Optional<Request> existingRequest = repository.findById(request.getRequestId());
 
-		return "Request sent successfully";
+	    if (existingRequest.isPresent()) {
+	        return "Request with this ID already exists"; // Prevent duplicate insertion
+	    }
+
+	    repository.save(request);
+	    return "Request sent successfully";
 	}
+
 
 	@Override
 	public Request getRequest(int requestId) throws RequestNotFound {

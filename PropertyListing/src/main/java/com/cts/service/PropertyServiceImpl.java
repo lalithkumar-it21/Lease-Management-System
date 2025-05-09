@@ -30,10 +30,17 @@ public class PropertyServiceImpl implements PropertyService {
 
 	@Override
 	public String saveProperty(Property property) {
-		repository.save(property);
+	    // Check if a property with the same ID already exists
+	    Optional<Property> existingProperty = repository.findById(property.getPropertyId());
 
-		return "Property saved successfully";
+	    if (existingProperty.isPresent()) {
+	        return "Property with this ID already exists"; // Prevent duplicate insertion
+	    }
+
+	    repository.save(property);
+	    return "Property saved successfully";
 	}
+
 
 	@Override
 	public Property getProperty(int propertyId) throws PropertyNotFoundException {

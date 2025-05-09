@@ -21,10 +21,16 @@ TenantRepository repository;
 
 @Override
 public String saveTenant(Tenant tenant) {
-	repository.save(tenant);
+    Optional<Tenant> existingTenant = repository.findById(tenant.getTenantId());
 
-	return "Tenant saved successfully";
+    if (existingTenant.isPresent()) {
+        return "Record already exists"; // Prevent duplicate insertion
+    }
+
+    repository.save(tenant);
+    return "Tenant saved successfully";
 }
+
 
 @Override
 public Tenant getTenant(int tenantId) throws TenantNotFound {

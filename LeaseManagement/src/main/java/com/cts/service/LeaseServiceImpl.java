@@ -30,12 +30,17 @@ public class LeaseServiceImpl implements LeaseService {
 	PropertyClient propertyClient;
 	@Override
 	public String saveLease(Lease lease) {
+	    // Check if lease with same leaseId already exists
+	    Optional<Lease> existingLease = repository.findById(lease.getLeaseId());
 
-		repository.save(lease);
+	    if (existingLease.isPresent()) {
+	        return "Lease already exists"; // Prevent duplicate insertion
+	    }
 
-		return "Lease saved successfully";
-
+	    repository.save(lease);
+	    return "Lease saved successfully";
 	}
+
 
 	@Override
 	public Lease updateLease(Lease lease) {
