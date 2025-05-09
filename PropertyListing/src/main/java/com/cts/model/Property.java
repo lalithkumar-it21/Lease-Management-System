@@ -30,6 +30,9 @@ public class Property {
     @Min(value = 1, message = "Rent amount must be greater than 0")
     private int rentAmount;
 
+    @Min(value = 1, message = "period must be greater than 0 and in months")
+    private int period;
+    
     @NotBlank(message = "Property details cannot be blank")
     private String propertyDetails;
 

@@ -28,7 +28,7 @@ public class PropertyControllerTest {
 
     @Test
     void testSaveProperty() {
-        Property property = new Property(101, 1, "123 Main Street", 5000, "2 BHK Apartment", "AVAILABLE");
+        Property property = new Property(101, 1, "123 Main Street", 5000, 6,"2 BHK Apartment", "AVAILABLE");
         when(propertyService.saveProperty(property)).thenReturn("Property saved successfully");
 
         ResponseEntity<String> response = propertyController.saveProperty(property);
@@ -39,7 +39,7 @@ public class PropertyControllerTest {
 
     @Test
     void testUpdateProperty() {
-        Property property = new Property(101, 1, "123 Main Street", 5500, "Updated Apartment Details", "AVAILABLE");
+        Property property = new Property(101, 1, "123 Main Street", 5500,6, "Updated Apartment Details", "AVAILABLE");
         when(propertyService.updateProperty(property)).thenReturn(property);
 
         ResponseEntity<Property> response = propertyController.updateProperty(property);
@@ -50,7 +50,7 @@ public class PropertyControllerTest {
 
     @Test
     void testGetProperty() {
-        Property property = new Property(101, 1, "123 Main Street", 5000, "2 BHK Apartment", "AVAILABLE");
+        Property property = new Property(101, 1, "123 Main Street", 5000,6, "2 BHK Apartment", "AVAILABLE");
         when(propertyService.getProperty(101)).thenReturn(property);
 
         Property response = propertyController.getProperty(101);
@@ -61,8 +61,8 @@ public class PropertyControllerTest {
 
     @Test
     void testGetAllProperties() {
-        Property property1 = new Property(101, 1, "123 Main Street", 5000, "2 BHK Apartment", "AVAILABLE");
-        Property property2 = new Property(102, 2, "456 Side Lane", 6000, "3 BHK Apartment", "AVAILABLE");
+        Property property1 = new Property(101, 1, "123 Main Street", 5000,6, "2 BHK Apartment", "AVAILABLE");
+        Property property2 = new Property(102, 2, "456 Side Lane", 6000, 6,"3 BHK Apartment", "AVAILABLE");
         List<Property> propertyList = Arrays.asList(property1, property2);
 
         when(propertyService.getAllProperty()).thenReturn(propertyList);
@@ -75,8 +75,8 @@ public class PropertyControllerTest {
 
     @Test
     void testGetPropertiesByOwner() {
-        Property property1 = new Property(101, 1, "123 Main Street", 5000, "2 BHK Apartment", "AVAILABLE");
-        Property property2 = new Property(102, 1, "789 Central Ave", 7000, "4 BHK Apartment", "AVAILABLE");
+        Property property1 = new Property(101, 1, "123 Main Street", 5000, 6,"2 BHK Apartment", "AVAILABLE");
+        Property property2 = new Property(102, 1, "789 Central Ave", 7000,6, "4 BHK Apartment", "AVAILABLE");
         List<Property> propertyList = Arrays.asList(property1, property2);
 
         when(propertyService.getPropertiesByOwnerId(1)).thenReturn(propertyList);
@@ -89,8 +89,8 @@ public class PropertyControllerTest {
 
     @Test
     void testGetPropertiesByAddressSimilarity() {
-        Property property1 = new Property(101, 1, "123 Main Street", 5000, "2 BHK Apartment", "AVAILABLE");
-        Property property2 = new Property(102, 2, "456 Main Road", 6000, "3 BHK Apartment", "AVAILABLE");
+        Property property1 = new Property(101, 1, "123 Main Street", 5000, 6,"2 BHK Apartment", "AVAILABLE");
+        Property property2 = new Property(102, 2, "456 Main Road", 6000, 6,"3 BHK Apartment", "AVAILABLE");
         List<Property> propertyList = Arrays.asList(property1, property2);
 
         when(propertyService.getPropertiesByAddressSimilarity("Main")).thenReturn(propertyList);
@@ -103,8 +103,8 @@ public class PropertyControllerTest {
 
     @Test
     void testGetPropertiesByRentRange() {
-        Property property1 = new Property(101, 1, "123 Main Street", 5000, "2 BHK Apartment", "AVAILABLE");
-        Property property2 = new Property(102, 2, "789 Central Ave", 7000, "4 BHK Apartment", "AVAILABLE");
+        Property property1 = new Property(101, 1, "123 Main Street", 5000, 6,"2 BHK Apartment", "AVAILABLE");
+        Property property2 = new Property(102, 2, "789 Central Ave", 7000, 6,"4 BHK Apartment", "AVAILABLE");
         List<Property> propertyList = Arrays.asList(property1, property2);
 
         when(propertyService.getPropertiesByRentRange(4000, 8000)).thenReturn(propertyList);
