@@ -627,3 +627,8 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 2025-05-09T12:05:47.989+05:30  INFO 25636 --- [TenantManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2025-05-09T12:10:48.002+05:30  INFO 25636 --- [TenantManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2025-05-09T12:15:48.023+05:30  INFO 25636 --- [TenantManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-09T12:20:48.035+05:30  INFO 25636 --- [TenantManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-09T12:25:48.039+05:30  INFO 25636 --- [TenantManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-09T12:30:48.053+05:30  INFO 25636 --- [TenantManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-09T12:35:52.688+05:30  INFO 25636 --- [TenantManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-09T13:46:15.455+05:30  WARN 25636 --- [TenantManagement] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h6m59s165ms885µs900ns).
