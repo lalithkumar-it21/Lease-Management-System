@@ -644,3 +644,4 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 2025-05-09T12:30:42.595+05:30  INFO 19040 --- [OwnerManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2025-05-09T12:35:44.908+05:30  INFO 19040 --- [OwnerManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2025-05-09T13:46:08.844+05:30  WARN 19040 --- [OwnerManagement] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h6m59s174ms3µs700ns).
+2025-05-09T13:47:17.410+05:30  INFO 19040 --- [OwnerManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
