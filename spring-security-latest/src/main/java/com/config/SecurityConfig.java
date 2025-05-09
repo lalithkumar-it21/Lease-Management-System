@@ -37,7 +37,7 @@ public class SecurityConfig {
         return http.csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(requests -> requests
                         .requestMatchers("/auth/authenticate", "/auth/getroles/**", "/auth/**").permitAll())
-                .authorizeHttpRequests(requests -> requests.requestMatchers("/owner/**","/property/**","/tenant/**","/lease/**")
+                .authorizeHttpRequests(requests -> requests.requestMatchers("/owner/**","/property/**","/tenant/**","/lease/**","/request/**")
                         .authenticated())
                 .sessionManagement(management -> management
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS))

@@ -60,21 +60,23 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
 
     private boolean isAuthorized(String role, String path, String method) {
     	if ("ADMIN".equalsIgnoreCase(role)) {
-    	    return path.startsWith("/owner") || path.startsWith("/property") || path.startsWith("/lease") || path.startsWith("/tenant");
+    	    return path.startsWith("/owner") || path.startsWith("/property") || path.startsWith("/lease") || path.startsWith("/tenant") || path.startsWith("/request");
     	} 
 
     	else if ("TENANT".equalsIgnoreCase(role)) {
     	    return path.startsWith("/tenant")  // Tenant can perform CRUD on tenant details
     	           || (path.startsWith("/property") && method.equalsIgnoreCase("GET")) // Tenant can view properties
     	           || (path.startsWith("/lease") && method.equalsIgnoreCase("GET")) // Tenant can view leases
-    	           || (path.startsWith("/owner") && method.equalsIgnoreCase("GET")); // Tenant can view owners
+    	           || (path.startsWith("/owner") && method.equalsIgnoreCase("GET"))// Tenant can view owners
+    	           || (path.startsWith("/request") && (method.equalsIgnoreCase("POST") || method.equalsIgnoreCase("GET") ||method.equalsIgnoreCase("DELETE"))); // Tenant can add get delete request
     	}
 
     	else if ("OWNER".equalsIgnoreCase(role)) {
     	    return path.startsWith("/owner")  // Owner can perform CRUD on owner details
     	           || path.startsWith("/lease") // Owner can perform CRUD on leases
     	           || path.startsWith("/property") // Owner can perform CRUD on properties
-    	           || (path.startsWith("/tenant") && method.equalsIgnoreCase("GET")); // Owner can view tenants
+    	           || (path.startsWith("/tenant") && method.equalsIgnoreCase("GET")) // Owner can view tenants
+    	           || (path.startsWith("/request") && (method.equalsIgnoreCase("GET") || method.equalsIgnoreCase("PUT"))); // Owner can view and update requests
     	}
 
     	return false;

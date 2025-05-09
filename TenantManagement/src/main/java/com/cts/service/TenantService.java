@@ -13,7 +13,6 @@ public interface TenantService {
 	public abstract Tenant getTenant(int tenantId)throws TenantNotFound;
 	public abstract Tenant updateTenant(Tenant tenant);
 	public abstract List<Tenant> getAllTenant();
-	
 	public abstract String deleteTenant(int tenantId);
 	 
 	
