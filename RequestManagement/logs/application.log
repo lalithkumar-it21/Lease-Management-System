@@ -1,382 +1,166 @@
-2025-05-09T10:57:09.720+05:30  INFO 18464 --- [RequestManagement] [restartedMain] com.cts.RequestManagementApplication     : Starting RequestManagementApplication using Java 21.0.6 with PID 18464 (C:\Users\2400736\OneDrive - Cognizant\Desktop\STS\RequestManagement\target\classes started by 2400736 in C:\Users\2400736\OneDrive - Cognizant\Desktop\STS\RequestManagement)
-2025-05-09T10:57:09.723+05:30  INFO 18464 --- [RequestManagement] [restartedMain] com.cts.RequestManagementApplication     : No active profile set, falling back to 1 default profile: "default"
-2025-05-09T10:57:09.800+05:30  INFO 18464 --- [RequestManagement] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8088
-2025-05-09T10:57:09.801+05:30  INFO 18464 --- [RequestManagement] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=RequestManagement, profiles=[default], label=null, version=440f1a47c25d3d97a8010bcb05cb619c643494c7, state=
-2025-05-09T10:57:09.803+05:30  INFO 18464 --- [RequestManagement] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-05-09T10:57:09.804+05:30  INFO 18464 --- [RequestManagement] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-05-09T10:57:11.511+05:30  INFO 18464 --- [RequestManagement] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-09T10:57:11.861+05:30  INFO 18464 --- [RequestManagement] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 328 ms. Found 1 JPA repository interface.
-2025-05-09T10:57:12.324+05:30  INFO 18464 --- [RequestManagement] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8c702f55-2dcf-3c5d-93ff-7c1c79cd095f
-2025-05-09T10:57:13.543+05:30  INFO 18464 --- [RequestManagement] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9095 (http)
-2025-05-09T10:57:13.567+05:30  INFO 18464 --- [RequestManagement] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-09T10:57:13.567+05:30  INFO 18464 --- [RequestManagement] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-05-09T10:57:13.733+05:30  INFO 18464 --- [RequestManagement] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-05-09T10:57:13.733+05:30  INFO 18464 --- [RequestManagement] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3928 ms
-2025-05-09T10:57:22.228+05:30  INFO 18464 --- [RequestManagement] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-09T10:57:22.390+05:30  INFO 18464 --- [RequestManagement] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
-2025-05-09T10:57:22.514+05:30  INFO 18464 --- [RequestManagement] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-05-09T10:57:23.428+05:30  INFO 18464 --- [RequestManagement] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-09T10:57:23.522+05:30  INFO 18464 --- [RequestManagement] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-05-09T10:57:25.191+05:30  INFO 18464 --- [RequestManagement] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@223673a6
-2025-05-09T10:57:25.207+05:30  INFO 18464 --- [RequestManagement] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-05-09T10:57:25.331+05:30  WARN 18464 --- [RequestManagement] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-09T10:57:25.369+05:30  INFO 18464 --- [RequestManagement] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0.41
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-05-09T10:57:27.789+05:30  INFO 18464 --- [RequestManagement] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-09T10:57:27.932+05:30  INFO 18464 --- [RequestManagement] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-09T10:57:28.660+05:30  WARN 18464 --- [RequestManagement] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-09T10:57:29.833+05:30  WARN 18464 --- [RequestManagement] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2025-05-09T10:57:29.974+05:30  INFO 18464 --- [RequestManagement] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-05-09T10:57:30.069+05:30  WARN 18464 --- [RequestManagement] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-05-09T10:57:30.194+05:30  INFO 18464 --- [RequestManagement] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-05-09T10:57:30.266+05:30  INFO 18464 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-05-09T10:57:30.277+05:30  INFO 18464 --- [RequestManagement] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-09T10:57:30.300+05:30  INFO 18464 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-05-09T10:57:30.300+05:30  INFO 18464 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-05-09T10:57:30.300+05:30  INFO 18464 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-05-09T10:57:30.300+05:30  INFO 18464 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-05-09T10:57:30.302+05:30  INFO 18464 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-05-09T10:57:30.302+05:30  INFO 18464 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-05-09T10:57:30.303+05:30  INFO 18464 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-05-09T10:57:30.909+05:30  INFO 18464 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-05-09T10:57:30.925+05:30  INFO 18464 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-05-09T10:57:30.925+05:30  INFO 18464 --- [RequestManagement] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-05-09T10:57:30.925+05:30  INFO 18464 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1746768450925 with initial instances count: 5
-2025-05-09T10:57:30.940+05:30  INFO 18464 --- [RequestManagement] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application REQUESTMANAGEMENT with eureka with status UP
-2025-05-09T10:57:30.940+05:30  INFO 18464 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746768450940, current=UP, previous=STARTING]
-2025-05-09T10:57:30.940+05:30  INFO 18464 --- [RequestManagement] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095: registering service...
-2025-05-09T10:57:30.972+05:30  INFO 18464 --- [RequestManagement] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9095 (http) with context path '/'
-2025-05-09T10:57:30.972+05:30  INFO 18464 --- [RequestManagement] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9095
-2025-05-09T10:57:31.003+05:30  INFO 18464 --- [RequestManagement] [restartedMain] com.cts.RequestManagementApplication     : Started RequestManagementApplication in 23.864 seconds (process running for 26.354)
-2025-05-09T10:57:31.035+05:30  INFO 18464 --- [RequestManagement] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095 - registration status: 204
-2025-05-09T11:02:14.374+05:30  INFO 18464 --- [RequestManagement] [http-nio-9095-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-05-09T11:02:14.375+05:30  INFO 18464 --- [RequestManagement] [http-nio-9095-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-05-09T11:02:14.378+05:30  INFO 18464 --- [RequestManagement] [http-nio-9095-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2025-05-09T11:02:30.316+05:30  INFO 18464 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-09T11:07:30.333+05:30  INFO 18464 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-09T11:09:02.472+05:30  INFO 18464 --- [RequestManagement] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplicationsInternal(RestTemplateEurekaHttpClient.java:174)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getDelta(RestTemplateEurekaHttpClient.java:186)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
-	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1080)
-	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:963)
-	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
-	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:751)
-	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
-	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
-	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:183)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
-	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
-	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
-	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
-	... 22 more
+2025-05-12T06:37:15.439+05:30  WARN 24824 --- [RequestManagement] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=19h53m6s332ms789µs900ns).
+2025-05-12T06:37:23.873+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T06:42:23.925+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T06:47:23.977+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T06:52:24.081+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T06:57:24.093+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T07:02:24.106+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T07:07:24.122+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T07:12:24.125+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T07:17:24.131+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T07:22:24.135+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T07:27:24.252+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T07:32:24.254+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T07:37:24.257+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T07:42:24.270+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T07:47:24.419+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T07:52:24.436+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T07:56:22.160+05:30  INFO 24824 --- [RequestManagement] [http-nio-9095-exec-4] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
 
-2025-05-09T11:09:02.472+05:30  INFO 18464 --- [RequestManagement] [DiscoveryClient-HeartbeatExecutor-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on PUT request for "http://localhost:8761/eureka/apps/REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://localhost:8761/eureka/apps/REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.sendHeartBeat(RestTemplateEurekaHttpClient.java:119)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
-	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845)
-	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1402)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:751)
-	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
-	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
-	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:183)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
-	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
-	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
-	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
-	... 19 more
-
-2025-05-09T11:09:02.473+05:30  WARN 18464 --- [RequestManagement] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-2025-05-09T11:09:02.473+05:30  WARN 18464 --- [RequestManagement] [DiscoveryClient-HeartbeatExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on PUT request for "http://localhost:8761/eureka/apps/REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-2025-05-09T11:09:02.493+05:30  INFO 18464 --- [RequestManagement] [DiscoveryClient-HeartbeatExecutor-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on PUT request for "http://localhost:8761/eureka/apps/REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://localhost:8761/eureka/apps/REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.sendHeartBeat(RestTemplateEurekaHttpClient.java:119)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
-	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845)
-	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1402)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:751)
-	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
-	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
-	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:183)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
-	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
-	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
-	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
-	... 20 more
-
-2025-05-09T11:09:02.493+05:30  WARN 18464 --- [RequestManagement] [DiscoveryClient-HeartbeatExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on PUT request for "http://localhost:8761/eureka/apps/REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-2025-05-09T11:09:02.494+05:30 ERROR 18464 --- [RequestManagement] [DiscoveryClient-HeartbeatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095 - was unable to send heartbeat!
-
-com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845) ~[eureka-client-2.0.4.jar:2.0.4]
-	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1402) ~[eureka-client-2.0.4.jar:2.0.4]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x020x010xc00x010x000x010xbc0x030x02b0xa8(?r0x950xfd0xb40x0bw0xa70x9d0xcdF0xec8Q0xd7>G0xd40x860x81=0x160x060x83mP:%0xd80x000x01|0x000x000x000x010x000x020x000x030x000x040x000x050x000x060x000x070x000x080x000x090x000x0a0x000x0b0x000x0c0x000x0d0x000x0e0x000x0f0x000x100x000x110x000x120x000x130x000x140x000x150x000x160x000x170x000x180x000x190x000x1a0x000x1b0x00/0x0000x0010x0020x0030x0040x0050x0060x0070x0080x0090x00:0x00;0x00<0x00=0x00>0x00?0x00@0x00A0x00B0x00C0x00D0x00E0x00F0x00g0x00h0x00i0x00j0x00k0x00l0x00m0x000x840x000x850x000x860x000x870x000x880x000x890x000x960x000x970x000x980x000x990x000x9a0x000x9b0x000x9c0x000x9d0x000x9e0x000x9f0x000xa00x000xa10x000xa20x000xa30x000xa40x000xa50x000xa60x000xa70x000xba0x000xbb0x000xbc0x000xbd0x000xbe0x000xbf0x000xc00x000xc10x000xc20x000xc30x000xc40x000xc50x130x010x130x020x130x030x130x040x130x050xc00x010xc00x020xc00x030xc00x040xc00x050xc00x060xc00x070xc00x080xc00x090xc00x0a0xc00x0b0xc00x0c0xc00x0d0xc00x0e0xc00x0f0xc00x100xc00x110xc00x120xc00x130xc00x140xc00x150xc00x160xc00x170xc00x180xc00x190xc0#0xc0$0xc0%0xc0&0xc0'0xc0(0xc0)0xc0*0xc0+0xc0,0xc0-0xc0.0xc0/0xc000xc010xc020xc0r0xc0s0xc0t0xc0u0xc0v0xc0w0xc0x0xc0y0xc0z0xc0{0xc0|0xc0}0xc0~0xc00x7f0xc00x800xc00x810xc00x820xc00x830xc00x840xc00x850xc00x860xc00x870xc00x880xc00x890xc00x8a0xc00x8b0xc00x8c0xc00x8d0xc00x8e0xc00x8f0xc00x900xc00x910xc00x920xc00x930xc00x940xc00x950xc00x960xc00x970xc00x980xc00x990xc00x9a0xc00x9b0xcc0xa80xcc0xa90xcc0xaa0xcc0xab0xcc0xac0xcc0xad0xcc0xae0x020x000x010x000x160x000x0a0x000x0a0x000x080x000x170x000x190x000x180x000x160x000x0b0x000x040x030x000x010x02...]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:403) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
 
-2025-05-09T11:09:02.529+05:30  INFO 18464 --- [RequestManagement] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplicationsInternal(RestTemplateEurekaHttpClient.java:174)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getDelta(RestTemplateEurekaHttpClient.java:186)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
-	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
-	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1080)
-	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:963)
-	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
-	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:751)
-	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
-	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
-	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:183)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
-	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
-	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
-	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
-	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
-	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
-	... 23 more
+2025-05-12T07:56:22.228+05:30  INFO 24824 --- [RequestManagement] [http-nio-9095-exec-5] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
 
-2025-05-09T11:09:02.530+05:30  WARN 18464 --- [RequestManagement] [DiscoveryClient-CacheRefreshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
-2025-05-09T11:09:02.530+05:30  INFO 18464 --- [RequestManagement] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
-	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1080)
-	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:963)
-	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
-	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x010xc00x010x000x010xbc0x030x01]0xe20x840x0e~u0xb70xd70xeaS0xcdG0x8a0xb20x85e0x19J0xf70x040xa40x0d[0x130xa8`[0x090x83if0xda0x000x01|0x000x000x000x010x000x020x000x030x000x040x000x050x000x060x000x070x000x080x000x090x000x0a0x000x0b0x000x0c0x000x0d0x000x0e0x000x0f0x000x100x000x110x000x120x000x130x000x140x000x150x000x160x000x170x000x180x000x190x000x1a0x000x1b0x00/0x0000x0010x0020x0030x0040x0050x0060x0070x0080x0090x00:0x00;0x00<0x00=0x00>0x00?0x00@0x00A0x00B0x00C0x00D0x00E0x00F0x00g0x00h0x00i0x00j0x00k0x00l0x00m0x000x840x000x850x000x860x000x870x000x880x000x890x000x960x000x970x000x980x000x990x000x9a0x000x9b0x000x9c0x000x9d0x000x9e0x000x9f0x000xa00x000xa10x000xa20x000xa30x000xa40x000xa50x000xa60x000xa70x000xba0x000xbb0x000xbc0x000xbd0x000xbe0x000xbf0x000xc00x000xc10x000xc20x000xc30x000xc40x000xc50x130x010x130x020x130x030x130x040x130x050xc00x010xc00x020xc00x030xc00x040xc00x050xc00x060xc00x070xc00x080xc00x090xc00x0a0xc00x0b0xc00x0c0xc00x0d0xc00x0e0xc00x0f0xc00x100xc00x110xc00x120xc00x130xc00x140xc00x150xc00x160xc00x170xc00x180xc00x190xc0#0xc0$0xc0%0xc0&0xc0'0xc0(0xc0)0xc0*0xc0+0xc0,0xc0-0xc0.0xc0/0xc000xc010xc020xc0r0xc0s0xc0t0xc0u0xc0v0xc0w0xc0x0xc0y0xc0z0xc0{0xc0|0xc0}0xc0~0xc00x7f0xc00x800xc00x810xc00x820xc00x830xc00x840xc00x850xc00x860xc00x870xc00x880xc00x890xc00x8a0xc00x8b0xc00x8c0xc00x8d0xc00x8e0xc00x8f0xc00x900xc00x910xc00x920xc00x930xc00x940xc00x950xc00x960xc00x970xc00x980xc00x990xc00x9a0xc00x9b0xcc0xa80xcc0xa90xcc0xaa0xcc0xab0xcc0xac0xcc0xad0xcc0xae0x020x000x010x000x160x000x0a0x000x0a0x000x080x000x170x000x190x000x180x000x160x000x0b0x000x040x030x000x010x02...]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:403) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
 
-2025-05-09T11:09:10.214+05:30  INFO 18464 --- [RequestManagement] [RMI TCP Connection(17)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2025-05-09T11:09:10.215+05:30  INFO 18464 --- [RequestManagement] [RMI TCP Connection(17)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application REQUESTMANAGEMENT with eureka with status DOWN
-2025-05-09T11:09:10.215+05:30  INFO 18464 --- [RequestManagement] [RMI TCP Connection(17)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746769150215, current=DOWN, previous=UP]
-2025-05-09T11:09:10.217+05:30  INFO 18464 --- [RequestManagement] [RMI TCP Connection(17)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-09T11:09:10.228+05:30  INFO 18464 --- [RequestManagement] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095: registering service...
-2025-05-09T11:09:10.259+05:30  INFO 18464 --- [RequestManagement] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-05-09T11:09:10.278+05:30  INFO 18464 --- [RequestManagement] [RMI TCP Connection(17)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-05-09T11:09:10.289+05:30  INFO 18464 --- [RequestManagement] [RMI TCP Connection(17)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-05-09T11:09:10.308+05:30  INFO 18464 --- [RequestManagement] [RMI TCP Connection(17)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-05-09T11:09:10.309+05:30  INFO 18464 --- [RequestManagement] [RMI TCP Connection(17)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2025-05-09T11:09:10.510+05:30  INFO 18464 --- [RequestManagement] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095 - registration status: 204
-2025-05-09T11:09:10.511+05:30  INFO 18464 --- [RequestManagement] [RMI TCP Connection(17)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2025-05-09T11:09:10.539+05:30  INFO 18464 --- [RequestManagement] [RMI TCP Connection(17)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095 - deregister  status: 200
-2025-05-09T11:09:10.539+05:30  INFO 18464 --- [RequestManagement] [RMI TCP Connection(17)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2025-05-09T11:09:27.473+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.cts.RequestManagementApplication     : Starting RequestManagementApplication using Java 21.0.6 with PID 14396 (C:\Users\2400736\OneDrive - Cognizant\Desktop\STS\RequestManagement\target\classes started by 2400736 in C:\Users\2400736\OneDrive - Cognizant\Desktop\STS\RequestManagement)
-2025-05-09T11:09:27.478+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.cts.RequestManagementApplication     : No active profile set, falling back to 1 default profile: "default"
-2025-05-09T11:09:27.532+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8088
-2025-05-09T11:09:27.532+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=RequestManagement, profiles=[default], label=null, version=440f1a47c25d3d97a8010bcb05cb619c643494c7, state=
-2025-05-09T11:09:27.535+05:30  INFO 14396 --- [RequestManagement] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-05-09T11:09:27.535+05:30  INFO 14396 --- [RequestManagement] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-05-09T11:09:28.336+05:30  INFO 14396 --- [RequestManagement] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-09T11:09:28.493+05:30  INFO 14396 --- [RequestManagement] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 144 ms. Found 1 JPA repository interface.
-2025-05-09T11:09:28.697+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8c702f55-2dcf-3c5d-93ff-7c1c79cd095f
-2025-05-09T11:09:29.216+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9095 (http)
-2025-05-09T11:09:29.234+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-09T11:09:29.235+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-05-09T11:09:29.305+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-05-09T11:09:29.306+05:30  INFO 14396 --- [RequestManagement] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1770 ms
-2025-05-09T11:09:29.494+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-09T11:09:29.604+05:30  INFO 14396 --- [RequestManagement] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
-2025-05-09T11:09:29.662+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-05-09T11:09:30.069+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-09T11:09:30.113+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-05-09T11:09:30.510+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@46013aeb
-2025-05-09T11:09:30.512+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-05-09T11:09:30.583+05:30  WARN 14396 --- [RequestManagement] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-09T11:09:30.613+05:30  INFO 14396 --- [RequestManagement] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-05-12T07:56:22.241+05:30  INFO 24824 --- [RequestManagement] [http-nio-9095-exec-1] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x030x010xf40x010x000x010xf00x030x030x170xd90x030xe5'0x830xe90xacC0xea0xe60x920x9b0x8c-E0x180xc0/0xf50xd00x850x980xa00x916n0x8a0xc10x0a0xdd0x050x000x01|0x000x000x000x010x000x020x000x030x000x040x000x050x000x060x000x070x000x080x000x090x000x0a0x000x0b0x000x0c0x000x0d0x000x0e0x000x0f0x000x100x000x110x000x120x000x130x000x140x000x150x000x160x000x170x000x180x000x190x000x1a0x000x1b0x00/0x0000x0010x0020x0030x0040x0050x0060x0070x0080x0090x00:0x00;0x00<0x00=0x00>0x00?0x00@0x00A0x00B0x00C0x00D0x00E0x00F0x00g0x00h0x00i0x00j0x00k0x00l0x00m0x000x840x000x850x000x860x000x870x000x880x000x890x000x960x000x970x000x980x000x990x000x9a0x000x9b0x000x9c0x000x9d0x000x9e0x000x9f0x000xa00x000xa10x000xa20x000xa30x000xa40x000xa50x000xa60x000xa70x000xba0x000xbb0x000xbc0x000xbd0x000xbe0x000xbf0x000xc00x000xc10x000xc20x000xc30x000xc40x000xc50x130x010x130x020x130x030x130x040x130x050xc00x010xc00x020xc00x030xc00x040xc00x050xc00x060xc00x070xc00x080xc00x090xc00x0a0xc00x0b0xc00x0c0xc00x0d0xc00x0e0xc00x0f0xc00x100xc00x110xc00x120xc00x130xc00x140xc00x150xc00x160xc00x170xc00x180xc00x190xc0#0xc0$0xc0%0xc0&0xc0'0xc0(0xc0)0xc0*0xc0+0xc0,0xc0-0xc0.0xc0/0xc000xc010xc020xc0r0xc0s0xc0t0xc0u0xc0v0xc0w0xc0x0xc0y0xc0z0xc0{0xc0|0xc0}0xc0~0xc00x7f0xc00x800xc00x810xc00x820xc00x830xc00x840xc00x850xc00x860xc00x870xc00x880xc00x890xc00x8a0xc00x8b0xc00x8c0xc00x8d0xc00x8e0xc00x8f0xc00x900xc00x910xc00x920xc00x930xc00x940xc00x950xc00x960xc00x970xc00x980xc00x990xc00x9a0xc00x9b0xcc0xa80xcc0xa90xcc0xaa0xcc0xab0xcc0xac0xcc0xad0xcc0xae0x020x000x010x00J0x000x0a0x000x0a0x000x080x000x170x000x190x000x180x000x160x000x0b0x000x040x030x000x010x020x000x0d0x0000x00.0x040x030x050x030x060x030x080x070x080x080x080x1a0x080x1b0x080x1c0x080x090x080x0a0x080x0b0x080x040x080x050x080x060x040x010x050x010x060x010x030x030x030x010x030x020x040x020x050x020x060x02...]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:403) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-05-12T07:57:24.455+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T08:52:05.519+05:30  WARN 24824 --- [RequestManagement] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52m18s601ms443µs100ns).
+2025-05-12T08:54:13.246+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T08:59:13.256+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T09:04:13.261+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T09:09:13.266+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T09:14:13.283+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T09:19:13.286+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T09:24:13.292+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T09:29:13.308+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T09:34:13.322+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T09:39:13.339+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T09:44:13.355+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T09:49:13.359+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T09:54:13.375+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T09:59:13.388+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T10:04:13.404+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T10:09:13.412+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T10:14:13.425+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T10:19:13.439+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T10:24:13.444+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T10:29:13.454+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T10:34:13.474+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T10:39:13.492+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T10:44:13.503+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T10:49:13.518+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T10:54:13.543+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T10:59:13.565+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T11:04:13.577+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T11:09:13.581+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T11:14:13.591+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T11:19:13.600+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T11:24:13.613+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T11:29:13.622+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T11:34:13.626+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T11:39:13.639+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T11:44:13.653+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T11:49:13.665+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T11:54:13.690+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T11:59:13.749+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T12:04:13.761+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T12:09:13.766+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T12:14:13.891+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T12:19:13.905+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T12:24:13.907+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T13:04:40.050+05:30  WARN 24824 --- [RequestManagement] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=37m29s340ms760µs300ns).
+2025-05-12T13:06:13.250+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T13:11:13.254+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T13:16:13.260+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T13:21:13.274+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T13:26:13.278+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T13:31:13.290+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T13:36:13.306+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T13:41:13.311+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T13:46:13.328+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T13:51:13.336+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T13:56:13.341+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T14:01:13.353+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T14:06:13.362+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T14:11:13.373+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T14:16:13.408+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T14:21:13.413+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T14:26:13.525+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T14:31:13.543+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T14:36:13.561+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T14:41:13.569+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T14:46:13.587+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T14:51:13.596+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T14:56:13.611+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T15:01:13.627+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T15:06:13.632+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T15:11:13.642+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T15:16:13.661+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T15:21:13.666+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T15:26:13.679+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T15:31:13.687+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T15:36:13.715+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T15:41:13.716+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T15:46:13.737+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T15:51:13.741+05:30  INFO 24824 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T15:58:39.329+05:30  INFO 34824 --- [RequestManagement] [main] com.cts.RequestManagementApplication     : Starting RequestManagementApplication using Java 21.0.6 with PID 34824 (C:\Users\2400736\git\leaserepository\RequestManagement\target\classes started by 2400736 in C:\Users\2400736\git\leaserepository\RequestManagement)
+2025-05-12T15:58:39.335+05:30  INFO 34824 --- [RequestManagement] [main] com.cts.RequestManagementApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-05-12T15:58:39.429+05:30  INFO 34824 --- [RequestManagement] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8088
+2025-05-12T15:58:39.430+05:30  INFO 34824 --- [RequestManagement] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=RequestManagement, profiles=[default], label=null, version=7617f71588b888bf7a964946752b144ce849001f, state=
+2025-05-12T15:58:41.769+05:30  INFO 34824 --- [RequestManagement] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-12T15:58:42.116+05:30  INFO 34824 --- [RequestManagement] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 311 ms. Found 1 JPA repository interface.
+2025-05-12T15:58:42.484+05:30  INFO 34824 --- [RequestManagement] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=884c0862-eae2-3f63-8166-71635707c923
+2025-05-12T15:58:43.920+05:30  INFO 34824 --- [RequestManagement] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9095 (http)
+2025-05-12T15:58:43.953+05:30  INFO 34824 --- [RequestManagement] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-12T15:58:43.954+05:30  INFO 34824 --- [RequestManagement] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-12T15:58:44.119+05:30  INFO 34824 --- [RequestManagement] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-12T15:58:44.121+05:30  INFO 34824 --- [RequestManagement] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4686 ms
+2025-05-12T15:58:45.091+05:30  INFO 34824 --- [RequestManagement] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-12T15:58:45.287+05:30  INFO 34824 --- [RequestManagement] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-12T15:58:45.413+05:30  INFO 34824 --- [RequestManagement] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-12T15:58:46.404+05:30  INFO 34824 --- [RequestManagement] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-12T15:58:46.499+05:30  INFO 34824 --- [RequestManagement] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-12T15:58:47.269+05:30  INFO 34824 --- [RequestManagement] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5570ee6d
+2025-05-12T15:58:47.272+05:30  INFO 34824 --- [RequestManagement] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-12T15:58:47.392+05:30  WARN 34824 --- [RequestManagement] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-12T15:58:47.435+05:30  INFO 34824 --- [RequestManagement] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 8.0.41
@@ -384,209 +168,65 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-05-09T11:09:31.964+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-09T11:09:32.051+05:30  INFO 14396 --- [RequestManagement] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-09T11:09:32.399+05:30  WARN 14396 --- [RequestManagement] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-09T11:09:33.049+05:30  WARN 14396 --- [RequestManagement] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2025-05-09T11:09:33.132+05:30  INFO 14396 --- [RequestManagement] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-05-09T11:09:33.188+05:30  WARN 14396 --- [RequestManagement] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-05-09T11:09:33.264+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-05-09T11:09:33.299+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-05-09T11:09:33.307+05:30  INFO 14396 --- [RequestManagement] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-09T11:09:33.320+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-05-09T11:09:33.320+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-05-09T11:09:33.321+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-05-09T11:09:33.321+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-05-09T11:09:33.321+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-05-09T11:09:33.321+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-05-09T11:09:33.321+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-05-09T11:09:33.733+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-05-09T11:09:33.735+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-05-09T11:09:33.738+05:30  INFO 14396 --- [RequestManagement] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-05-09T11:09:33.740+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1746769173740 with initial instances count: 1
-2025-05-09T11:09:33.747+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application REQUESTMANAGEMENT with eureka with status UP
-2025-05-09T11:09:33.748+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746769173748, current=UP, previous=STARTING]
-2025-05-09T11:09:33.752+05:30  INFO 14396 --- [RequestManagement] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095: registering service...
-2025-05-09T11:09:33.780+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9095 (http) with context path '/'
-2025-05-09T11:09:33.781+05:30  INFO 14396 --- [RequestManagement] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9095
-2025-05-09T11:09:33.795+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.cts.RequestManagementApplication     : Started RequestManagementApplication in 14.434 seconds (process running for 15.642)
-2025-05-09T11:09:33.808+05:30  INFO 14396 --- [RequestManagement] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095 - registration status: 204
-2025-05-09T11:10:22.045+05:30  INFO 14396 --- [RequestManagement] [http-nio-9095-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-05-09T11:10:22.046+05:30  INFO 14396 --- [RequestManagement] [http-nio-9095-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-05-09T11:10:22.048+05:30  INFO 14396 --- [RequestManagement] [http-nio-9095-exec-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2025-05-09T11:13:27.857+05:30  INFO 14396 --- [RequestManagement] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
-2025-05-09T11:13:27.860+05:30  INFO 14396 --- [RequestManagement] [Thread-1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application REQUESTMANAGEMENT with eureka with status DOWN
-2025-05-09T11:13:27.860+05:30  INFO 14396 --- [RequestManagement] [Thread-1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746769407860, current=DOWN, previous=UP]
-2025-05-09T11:13:27.860+05:30  INFO 14396 --- [RequestManagement] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095: registering service...
-2025-05-09T11:13:27.862+05:30  INFO 14396 --- [RequestManagement] [Thread-1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-09T11:13:27.865+05:30  INFO 14396 --- [RequestManagement] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-05-09T11:13:27.870+05:30  INFO 14396 --- [RequestManagement] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-05-09T11:13:27.873+05:30  INFO 14396 --- [RequestManagement] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-05-09T11:13:27.877+05:30  INFO 14396 --- [RequestManagement] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095 - registration status: 204
-2025-05-09T11:13:27.881+05:30  INFO 14396 --- [RequestManagement] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-05-09T11:13:27.882+05:30  INFO 14396 --- [RequestManagement] [Thread-1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2025-05-09T11:13:30.897+05:30  INFO 14396 --- [RequestManagement] [Thread-1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2025-05-09T11:13:30.917+05:30  INFO 14396 --- [RequestManagement] [Thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095 - deregister  status: 200
-2025-05-09T11:13:30.917+05:30  INFO 14396 --- [RequestManagement] [Thread-1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2025-05-09T11:13:32.057+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.cts.RequestManagementApplication     : Starting RequestManagementApplication using Java 21.0.6 with PID 14396 (C:\Users\2400736\OneDrive - Cognizant\Desktop\STS\RequestManagement\target\classes started by 2400736 in C:\Users\2400736\OneDrive - Cognizant\Desktop\STS\RequestManagement)
-2025-05-09T11:13:32.058+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.cts.RequestManagementApplication     : No active profile set, falling back to 1 default profile: "default"
-2025-05-09T11:13:32.060+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8088
-2025-05-09T11:13:32.060+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=RequestManagement, profiles=[default], label=null, version=440f1a47c25d3d97a8010bcb05cb619c643494c7, state=
-2025-05-09T11:13:32.278+05:30  INFO 14396 --- [RequestManagement] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-09T11:13:32.307+05:30  INFO 14396 --- [RequestManagement] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 1 JPA repository interface.
-2025-05-09T11:13:32.458+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8c702f55-2dcf-3c5d-93ff-7c1c79cd095f
-2025-05-09T11:13:32.558+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9095 (http)
-2025-05-09T11:13:32.560+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-09T11:13:32.561+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-05-09T11:13:32.616+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-05-09T11:13:32.617+05:30  INFO 14396 --- [RequestManagement] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 556 ms
-2025-05-09T11:13:32.675+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-09T11:13:32.681+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-05-09T11:13:32.693+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-09T11:13:32.695+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2025-05-09T11:13:32.712+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e338ec7
-2025-05-09T11:13:32.713+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2025-05-09T11:13:32.714+05:30  WARN 14396 --- [RequestManagement] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-09T11:13:32.714+05:30  INFO 14396 --- [RequestManagement] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
-	Database driver: undefined/unknown
-	Database version: 8.0.41
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-05-09T11:13:32.755+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-09T11:13:32.793+05:30  INFO 14396 --- [RequestManagement] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-09T11:13:32.851+05:30  WARN 14396 --- [RequestManagement] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-09T11:13:32.998+05:30  WARN 14396 --- [RequestManagement] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2025-05-09T11:13:33.043+05:30  INFO 14396 --- [RequestManagement] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-05-09T11:13:33.063+05:30  WARN 14396 --- [RequestManagement] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-05-09T11:13:33.095+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-05-09T11:13:33.098+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-05-09T11:13:33.098+05:30  INFO 14396 --- [RequestManagement] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-09T11:13:33.099+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-05-09T11:13:33.099+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-05-09T11:13:33.099+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-05-09T11:13:33.099+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-05-09T11:13:33.099+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-05-09T11:13:33.099+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-05-09T11:13:33.099+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-05-09T11:13:33.137+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-05-09T11:13:33.139+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-05-09T11:13:33.139+05:30  INFO 14396 --- [RequestManagement] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-05-09T11:13:33.140+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1746769413140 with initial instances count: 7
-2025-05-09T11:13:33.142+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application REQUESTMANAGEMENT with eureka with status UP
-2025-05-09T11:13:33.143+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746769413143, current=UP, previous=STARTING]
-2025-05-09T11:13:33.143+05:30  INFO 14396 --- [RequestManagement] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095: registering service...
-2025-05-09T11:13:33.150+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9095 (http) with context path '/'
-2025-05-09T11:13:33.152+05:30  INFO 14396 --- [RequestManagement] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9095
-2025-05-09T11:13:33.159+05:30  INFO 14396 --- [RequestManagement] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095 - registration status: 204
-2025-05-09T11:13:33.160+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.cts.RequestManagementApplication     : Started RequestManagementApplication in 2.176 seconds (process running for 255.006)
-2025-05-09T11:13:33.162+05:30  INFO 14396 --- [RequestManagement] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2025-05-09T11:13:34.434+05:30  INFO 14396 --- [RequestManagement] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 12 class path changes (0 additions, 0 deletions, 12 modifications)
-2025-05-09T11:13:34.445+05:30  INFO 14396 --- [RequestManagement] [Thread-7] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application REQUESTMANAGEMENT with eureka with status DOWN
-2025-05-09T11:13:34.446+05:30  INFO 14396 --- [RequestManagement] [Thread-7] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746769414446, current=DOWN, previous=UP]
-2025-05-09T11:13:34.446+05:30  INFO 14396 --- [RequestManagement] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-09T11:13:34.446+05:30  INFO 14396 --- [RequestManagement] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095: registering service...
-2025-05-09T11:13:34.451+05:30  INFO 14396 --- [RequestManagement] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095 - registration status: 204
-2025-05-09T11:13:34.453+05:30  INFO 14396 --- [RequestManagement] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-05-09T11:13:34.456+05:30  INFO 14396 --- [RequestManagement] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-05-09T11:13:34.456+05:30  INFO 14396 --- [RequestManagement] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2025-05-09T11:13:34.462+05:30  INFO 14396 --- [RequestManagement] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2025-05-09T11:13:34.462+05:30  INFO 14396 --- [RequestManagement] [Thread-7] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2025-05-09T11:13:37.464+05:30  INFO 14396 --- [RequestManagement] [Thread-7] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2025-05-09T11:13:37.482+05:30  INFO 14396 --- [RequestManagement] [Thread-7] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095 - deregister  status: 200
-2025-05-09T11:13:37.482+05:30  INFO 14396 --- [RequestManagement] [Thread-7] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2025-05-09T11:13:38.344+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.cts.RequestManagementApplication     : Starting RequestManagementApplication using Java 21.0.6 with PID 14396 (C:\Users\2400736\OneDrive - Cognizant\Desktop\STS\RequestManagement\target\classes started by 2400736 in C:\Users\2400736\OneDrive - Cognizant\Desktop\STS\RequestManagement)
-2025-05-09T11:13:38.344+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.cts.RequestManagementApplication     : No active profile set, falling back to 1 default profile: "default"
-2025-05-09T11:13:38.346+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8088
-2025-05-09T11:13:38.347+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=RequestManagement, profiles=[default], label=null, version=440f1a47c25d3d97a8010bcb05cb619c643494c7, state=
-2025-05-09T11:13:38.506+05:30  INFO 14396 --- [RequestManagement] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-09T11:13:38.519+05:30  INFO 14396 --- [RequestManagement] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interface.
-2025-05-09T11:13:38.570+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8c702f55-2dcf-3c5d-93ff-7c1c79cd095f
-2025-05-09T11:13:38.622+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9095 (http)
-2025-05-09T11:13:38.623+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-09T11:13:38.623+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-05-09T11:13:38.652+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-05-09T11:13:38.652+05:30  INFO 14396 --- [RequestManagement] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 305 ms
-2025-05-09T11:13:38.721+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-09T11:13:38.723+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-05-09T11:13:38.730+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-09T11:13:38.732+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2025-05-09T11:13:38.746+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6fbc8db6
-2025-05-09T11:13:38.747+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2025-05-09T11:13:38.748+05:30  WARN 14396 --- [RequestManagement] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-09T11:13:38.748+05:30  INFO 14396 --- [RequestManagement] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
-	Database driver: undefined/unknown
-	Database version: 8.0.41
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-05-09T11:13:38.783+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-09T11:13:38.825+05:30  INFO 14396 --- [RequestManagement] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-09T11:13:38.895+05:30  WARN 14396 --- [RequestManagement] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-09T11:13:38.989+05:30  WARN 14396 --- [RequestManagement] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2025-05-09T11:13:39.032+05:30  INFO 14396 --- [RequestManagement] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-05-09T11:13:39.042+05:30  WARN 14396 --- [RequestManagement] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-05-09T11:13:39.058+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-05-09T11:13:39.060+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-05-09T11:13:39.061+05:30  INFO 14396 --- [RequestManagement] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-09T11:13:39.062+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-05-09T11:13:39.062+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-05-09T11:13:39.062+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-05-09T11:13:39.063+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-05-09T11:13:39.063+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-05-09T11:13:39.063+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-05-09T11:13:39.063+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-05-09T11:13:39.102+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-05-09T11:13:39.103+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-05-09T11:13:39.103+05:30  INFO 14396 --- [RequestManagement] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-05-09T11:13:39.104+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1746769419104 with initial instances count: 7
-2025-05-09T11:13:39.105+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application REQUESTMANAGEMENT with eureka with status UP
-2025-05-09T11:13:39.105+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746769419105, current=UP, previous=STARTING]
-2025-05-09T11:13:39.108+05:30  INFO 14396 --- [RequestManagement] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095: registering service...
-2025-05-09T11:13:39.110+05:30  INFO 14396 --- [RequestManagement] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9095 (http) with context path '/'
-2025-05-09T11:13:39.111+05:30  INFO 14396 --- [RequestManagement] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9095
-2025-05-09T11:13:39.127+05:30  INFO 14396 --- [RequestManagement] [restartedMain] com.cts.RequestManagementApplication     : Started RequestManagementApplication in 1.583 seconds (process running for 260.974)
-2025-05-09T11:13:39.130+05:30  INFO 14396 --- [RequestManagement] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095 - registration status: 204
-2025-05-09T11:13:39.131+05:30  INFO 14396 --- [RequestManagement] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2025-05-09T11:13:45.160+05:30  INFO 14396 --- [RequestManagement] [RMI TCP Connection(12)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2025-05-09T11:13:45.160+05:30  INFO 14396 --- [RequestManagement] [RMI TCP Connection(12)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application REQUESTMANAGEMENT with eureka with status DOWN
-2025-05-09T11:13:45.161+05:30  INFO 14396 --- [RequestManagement] [RMI TCP Connection(12)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746769425161, current=DOWN, previous=UP]
-2025-05-09T11:13:45.162+05:30  INFO 14396 --- [RequestManagement] [RMI TCP Connection(12)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-09T11:13:45.162+05:30  INFO 14396 --- [RequestManagement] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095: registering service...
-2025-05-09T11:13:45.171+05:30  INFO 14396 --- [RequestManagement] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095 - registration status: 204
-2025-05-09T11:13:45.179+05:30  INFO 14396 --- [RequestManagement] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-05-09T11:13:45.180+05:30  INFO 14396 --- [RequestManagement] [RMI TCP Connection(12)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-05-09T11:13:45.180+05:30  INFO 14396 --- [RequestManagement] [RMI TCP Connection(12)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2025-05-09T11:13:45.186+05:30  INFO 14396 --- [RequestManagement] [RMI TCP Connection(12)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
-2025-05-09T11:13:45.186+05:30  INFO 14396 --- [RequestManagement] [RMI TCP Connection(12)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2025-05-09T11:13:48.187+05:30  INFO 14396 --- [RequestManagement] [RMI TCP Connection(12)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2025-05-09T11:13:48.205+05:30  INFO 14396 --- [RequestManagement] [RMI TCP Connection(12)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095 - deregister  status: 200
-2025-05-09T11:13:48.205+05:30  INFO 14396 --- [RequestManagement] [RMI TCP Connection(12)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2025-05-09T11:14:00.651+05:30  INFO 11200 --- [RequestManagement] [main] com.cts.RequestManagementApplication     : Starting RequestManagementApplication using Java 21.0.6 with PID 11200 (C:\Users\2400736\OneDrive - Cognizant\Desktop\STS\RequestManagement\target\classes started by 2400736 in C:\Users\2400736\OneDrive - Cognizant\Desktop\STS\RequestManagement)
-2025-05-09T11:14:00.654+05:30  INFO 11200 --- [RequestManagement] [main] com.cts.RequestManagementApplication     : No active profile set, falling back to 1 default profile: "default"
-2025-05-09T11:14:00.701+05:30  INFO 11200 --- [RequestManagement] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8088
-2025-05-09T11:14:00.702+05:30  INFO 11200 --- [RequestManagement] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=RequestManagement, profiles=[default], label=null, version=440f1a47c25d3d97a8010bcb05cb619c643494c7, state=
-2025-05-09T11:14:02.400+05:30  INFO 11200 --- [RequestManagement] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-09T11:14:02.729+05:30  INFO 11200 --- [RequestManagement] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 287 ms. Found 1 JPA repository interface.
-2025-05-09T11:14:03.073+05:30  INFO 11200 --- [RequestManagement] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=884c0862-eae2-3f63-8166-71635707c923
-2025-05-09T11:14:03.774+05:30  INFO 11200 --- [RequestManagement] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9095 (http)
-2025-05-09T11:14:03.824+05:30  INFO 11200 --- [RequestManagement] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-09T11:14:03.826+05:30  INFO 11200 --- [RequestManagement] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-05-09T11:14:03.900+05:30  INFO 11200 --- [RequestManagement] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-05-09T11:14:03.902+05:30  INFO 11200 --- [RequestManagement] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3196 ms
-2025-05-09T11:14:04.419+05:30  INFO 11200 --- [RequestManagement] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-09T11:14:04.507+05:30  INFO 11200 --- [RequestManagement] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
-2025-05-09T11:14:04.551+05:30  INFO 11200 --- [RequestManagement] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-05-09T11:14:04.890+05:30  INFO 11200 --- [RequestManagement] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-09T11:14:04.920+05:30  INFO 11200 --- [RequestManagement] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-05-09T11:14:05.284+05:30  INFO 11200 --- [RequestManagement] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@17e66aed
-2025-05-09T11:14:05.287+05:30  INFO 11200 --- [RequestManagement] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-05-09T11:14:05.397+05:30  WARN 11200 --- [RequestManagement] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-09T11:14:05.455+05:30  INFO 11200 --- [RequestManagement] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-05-12T15:58:49.517+05:30  INFO 34824 --- [RequestManagement] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-12T15:58:49.694+05:30  INFO 34824 --- [RequestManagement] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-12T15:58:50.690+05:30  WARN 34824 --- [RequestManagement] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-12T15:58:53.701+05:30  INFO 34824 --- [RequestManagement] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-12T15:58:53.879+05:30  WARN 34824 --- [RequestManagement] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-12T15:58:54.036+05:30  INFO 34824 --- [RequestManagement] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoints beneath base path '/actuator'
+2025-05-12T15:58:54.373+05:30  INFO 34824 --- [RequestManagement] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-12T15:58:54.471+05:30  INFO 34824 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-12T15:58:54.483+05:30  INFO 34824 --- [RequestManagement] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T15:58:54.517+05:30  INFO 34824 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-12T15:58:54.518+05:30  INFO 34824 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-12T15:58:54.519+05:30  INFO 34824 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-12T15:58:54.519+05:30  INFO 34824 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-12T15:58:54.520+05:30  INFO 34824 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-12T15:58:54.521+05:30  INFO 34824 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-12T15:58:54.521+05:30  INFO 34824 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-12T15:58:55.397+05:30  INFO 34824 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-12T15:58:55.402+05:30  INFO 34824 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-12T15:58:55.408+05:30  INFO 34824 --- [RequestManagement] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-12T15:58:55.412+05:30  INFO 34824 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1747045735411 with initial instances count: 0
+2025-05-12T15:58:55.429+05:30  INFO 34824 --- [RequestManagement] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application REQUESTMANAGEMENT with eureka with status UP
+2025-05-12T15:58:55.433+05:30  INFO 34824 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747045735433, current=UP, previous=STARTING]
+2025-05-12T15:58:55.439+05:30  INFO 34824 --- [RequestManagement] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095: registering service...
+2025-05-12T15:58:55.536+05:30  INFO 34824 --- [RequestManagement] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9095 (http) with context path '/'
+2025-05-12T15:58:55.540+05:30  INFO 34824 --- [RequestManagement] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9095
+2025-05-12T15:58:55.598+05:30  INFO 34824 --- [RequestManagement] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095 - registration status: 204
+2025-05-12T15:58:55.599+05:30  INFO 34824 --- [RequestManagement] [main] com.cts.RequestManagementApplication     : Started RequestManagementApplication in 28.948 seconds (process running for 32.342)
+2025-05-12T15:58:56.388+05:30  INFO 34824 --- [RequestManagement] [RMI TCP Connection(5)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-12T15:58:56.389+05:30  INFO 34824 --- [RequestManagement] [RMI TCP Connection(5)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-12T15:58:56.393+05:30  INFO 34824 --- [RequestManagement] [RMI TCP Connection(5)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-05-12T15:59:25.403+05:30  INFO 34824 --- [RequestManagement] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-12T15:59:25.403+05:30  INFO 34824 --- [RequestManagement] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-12T15:59:25.404+05:30  INFO 34824 --- [RequestManagement] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-12T15:59:25.404+05:30  INFO 34824 --- [RequestManagement] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-12T15:59:25.404+05:30  INFO 34824 --- [RequestManagement] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-12T15:59:25.404+05:30  INFO 34824 --- [RequestManagement] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2025-05-12T15:59:25.405+05:30  INFO 34824 --- [RequestManagement] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-12T15:59:25.446+05:30  INFO 34824 --- [RequestManagement] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-12T16:11:07.129+05:30  INFO 15636 --- [RequestManagement] [main] com.cts.RequestManagementApplication     : Starting RequestManagementApplication using Java 21.0.6 with PID 15636 (C:\Users\2400736\git\leaserepository\RequestManagement\target\classes started by 2400736 in C:\Users\2400736\git\leaserepository\RequestManagement)
+2025-05-12T16:11:07.134+05:30  INFO 15636 --- [RequestManagement] [main] com.cts.RequestManagementApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-05-12T16:11:07.224+05:30  INFO 15636 --- [RequestManagement] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8088
+2025-05-12T16:11:07.224+05:30  INFO 15636 --- [RequestManagement] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=RequestManagement, profiles=[default], label=null, version=7617f71588b888bf7a964946752b144ce849001f, state=
+2025-05-12T16:11:10.374+05:30  INFO 15636 --- [RequestManagement] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-12T16:11:10.906+05:30  INFO 15636 --- [RequestManagement] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 508 ms. Found 1 JPA repository interface.
+2025-05-12T16:11:11.517+05:30  INFO 15636 --- [RequestManagement] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=884c0862-eae2-3f63-8166-71635707c923
+2025-05-12T16:11:13.381+05:30  INFO 15636 --- [RequestManagement] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9095 (http)
+2025-05-12T16:11:13.415+05:30  INFO 15636 --- [RequestManagement] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-12T16:11:13.415+05:30  INFO 15636 --- [RequestManagement] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-12T16:11:13.673+05:30  INFO 15636 --- [RequestManagement] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-12T16:11:13.674+05:30  INFO 15636 --- [RequestManagement] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6443 ms
+2025-05-12T16:11:14.995+05:30  INFO 15636 --- [RequestManagement] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-12T16:11:15.227+05:30  INFO 15636 --- [RequestManagement] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-12T16:11:15.348+05:30  INFO 15636 --- [RequestManagement] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-12T16:11:16.655+05:30  INFO 15636 --- [RequestManagement] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-12T16:11:16.765+05:30  INFO 15636 --- [RequestManagement] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-12T16:11:17.891+05:30  INFO 15636 --- [RequestManagement] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2f3d5cd
+2025-05-12T16:11:17.897+05:30  INFO 15636 --- [RequestManagement] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-12T16:11:18.059+05:30  WARN 15636 --- [RequestManagement] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-12T16:11:18.120+05:30  INFO 15636 --- [RequestManagement] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 8.0.41
@@ -594,36 +234,57 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-05-09T11:14:06.685+05:30  INFO 11200 --- [RequestManagement] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-09T11:14:06.748+05:30  INFO 11200 --- [RequestManagement] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-09T11:14:07.080+05:30  WARN 11200 --- [RequestManagement] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-09T11:14:08.901+05:30  INFO 11200 --- [RequestManagement] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-05-09T11:14:09.083+05:30  WARN 11200 --- [RequestManagement] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-05-09T11:14:09.196+05:30  INFO 11200 --- [RequestManagement] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoints beneath base path '/actuator'
-2025-05-09T11:14:09.429+05:30  INFO 11200 --- [RequestManagement] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-05-09T11:14:09.481+05:30  INFO 11200 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-05-09T11:14:09.488+05:30  INFO 11200 --- [RequestManagement] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-09T11:14:09.509+05:30  INFO 11200 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-05-09T11:14:09.509+05:30  INFO 11200 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-05-09T11:14:09.510+05:30  INFO 11200 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-05-09T11:14:09.510+05:30  INFO 11200 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-05-09T11:14:09.510+05:30  INFO 11200 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-05-09T11:14:09.511+05:30  INFO 11200 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-05-09T11:14:09.511+05:30  INFO 11200 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-05-09T11:14:10.018+05:30  INFO 11200 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-05-09T11:14:10.022+05:30  INFO 11200 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-05-09T11:14:10.028+05:30  INFO 11200 --- [RequestManagement] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-05-09T11:14:10.029+05:30  INFO 11200 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1746769450029 with initial instances count: 6
-2025-05-09T11:14:10.043+05:30  INFO 11200 --- [RequestManagement] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application REQUESTMANAGEMENT with eureka with status UP
-2025-05-09T11:14:10.045+05:30  INFO 11200 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746769450045, current=UP, previous=STARTING]
-2025-05-09T11:14:10.050+05:30  INFO 11200 --- [RequestManagement] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095: registering service...
-2025-05-09T11:14:10.074+05:30  INFO 11200 --- [RequestManagement] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9095 (http) with context path '/'
-2025-05-09T11:14:10.075+05:30  INFO 11200 --- [RequestManagement] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9095
-2025-05-09T11:14:10.093+05:30  INFO 11200 --- [RequestManagement] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095 - registration status: 204
-2025-05-09T11:14:10.094+05:30  INFO 11200 --- [RequestManagement] [main] com.cts.RequestManagementApplication     : Started RequestManagementApplication in 11.059 seconds (process running for 13.03)
-2025-05-09T11:14:10.836+05:30  INFO 11200 --- [RequestManagement] [RMI TCP Connection(8)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-05-09T11:14:10.837+05:30  INFO 11200 --- [RequestManagement] [RMI TCP Connection(8)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-05-09T11:14:10.839+05:30  INFO 11200 --- [RequestManagement] [RMI TCP Connection(8)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2025-05-09T11:23:50.110+05:30  WARN 11200 --- [RequestManagement] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m44s659ms854µs500ns).
-2025-05-09T11:27:24.177+05:30  INFO 11200 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-09T11:32:24.185+05:30  INFO 11200 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T16:11:21.023+05:30  INFO 15636 --- [RequestManagement] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-12T16:11:21.148+05:30  INFO 15636 --- [RequestManagement] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-12T16:11:22.068+05:30  WARN 15636 --- [RequestManagement] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-12T16:11:24.943+05:30  INFO 15636 --- [RequestManagement] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-12T16:11:25.139+05:30  WARN 15636 --- [RequestManagement] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-12T16:11:25.306+05:30  INFO 15636 --- [RequestManagement] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoints beneath base path '/actuator'
+2025-05-12T16:11:25.665+05:30  INFO 15636 --- [RequestManagement] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-12T16:11:25.755+05:30  INFO 15636 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-12T16:11:25.768+05:30  INFO 15636 --- [RequestManagement] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T16:11:25.804+05:30  INFO 15636 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-12T16:11:25.805+05:30  INFO 15636 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-12T16:11:25.806+05:30  INFO 15636 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-12T16:11:25.807+05:30  INFO 15636 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-12T16:11:25.808+05:30  INFO 15636 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-12T16:11:25.809+05:30  INFO 15636 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-12T16:11:25.809+05:30  INFO 15636 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-12T16:11:26.862+05:30  INFO 15636 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-12T16:11:26.867+05:30  INFO 15636 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-12T16:11:26.877+05:30  INFO 15636 --- [RequestManagement] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-12T16:11:26.881+05:30  INFO 15636 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1747046486880 with initial instances count: 1
+2025-05-12T16:11:26.907+05:30  INFO 15636 --- [RequestManagement] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application REQUESTMANAGEMENT with eureka with status UP
+2025-05-12T16:11:26.910+05:30  INFO 15636 --- [RequestManagement] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747046486910, current=UP, previous=STARTING]
+2025-05-12T16:11:26.916+05:30  INFO 15636 --- [RequestManagement] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095: registering service...
+2025-05-12T16:11:26.981+05:30  INFO 15636 --- [RequestManagement] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9095 (http) with context path '/'
+2025-05-12T16:11:26.983+05:30  INFO 15636 --- [RequestManagement] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9095
+2025-05-12T16:11:27.024+05:30  INFO 15636 --- [RequestManagement] [main] com.cts.RequestManagementApplication     : Started RequestManagementApplication in 34.619 seconds (process running for 38.051)
+2025-05-12T16:11:27.051+05:30  INFO 15636 --- [RequestManagement] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REQUESTMANAGEMENT/LTIN600038.cts.com:RequestManagement:9095 - registration status: 204
+2025-05-12T16:11:27.884+05:30  INFO 15636 --- [RequestManagement] [RMI TCP Connection(6)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-12T16:11:27.884+05:30  INFO 15636 --- [RequestManagement] [RMI TCP Connection(6)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-12T16:11:27.888+05:30  INFO 15636 --- [RequestManagement] [RMI TCP Connection(6)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-05-12T16:16:25.816+05:30  INFO 15636 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T16:21:25.831+05:30  INFO 15636 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T16:26:25.838+05:30  INFO 15636 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T16:31:25.850+05:30  INFO 15636 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T16:36:25.860+05:30  INFO 15636 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T16:41:25.862+05:30  INFO 15636 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T16:46:25.903+05:30  INFO 15636 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T16:51:25.906+05:30  INFO 15636 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T16:56:25.909+05:30  INFO 15636 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T17:01:25.924+05:30  INFO 15636 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T17:06:25.926+05:30  INFO 15636 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T17:11:25.941+05:30  INFO 15636 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T17:16:25.955+05:30  INFO 15636 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T17:21:25.967+05:30  INFO 15636 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T17:26:25.981+05:30  INFO 15636 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T17:31:25.997+05:30  INFO 15636 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T17:36:26.000+05:30  INFO 15636 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T17:41:26.016+05:30  INFO 15636 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T17:46:26.030+05:30  INFO 15636 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T17:51:26.043+05:30  INFO 15636 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T17:56:26.057+05:30  INFO 15636 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T18:01:26.064+05:30  INFO 15636 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T18:06:26.072+05:30  INFO 15636 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-12T18:11:26.076+05:30  INFO 15636 --- [RequestManagement] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

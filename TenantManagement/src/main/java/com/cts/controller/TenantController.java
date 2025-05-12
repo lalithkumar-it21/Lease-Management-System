@@ -22,35 +22,38 @@ import jakarta.validation.Valid;
 @RestController
 @RequestMapping("/tenant")
 public class TenantController {
-	
+
 	@Autowired
 	TenantService service;
-	  
+
+	// To save tenant
 	@PostMapping("/save")
 	public ResponseEntity<String> saveTenant(@Valid @RequestBody Tenant tenant) {
 		return ResponseEntity.ok(service.saveTenant(tenant));
 	}
-	
+
+	// To update tenant
 	@PutMapping("/update")
 	public ResponseEntity<Tenant> updateTenant(@RequestBody Tenant tenant) {
 		return ResponseEntity.ok(service.updateTenant(tenant));
 	}
 
+	// To get tenant
 	@GetMapping("/fetchById/{tenantid}")
 	public Tenant getTenant(@PathVariable("tenantid") int tenantId) throws TenantNotFound {
 		return service.getTenant(tenantId);
 	}
 
+	// To get all tenant
 	@GetMapping("/fetchAll")
 	public List<Tenant> getAllTenant() {
 		return service.getAllTenant();
 	}
-	
+
+	// To delete tenant
 	@DeleteMapping("/delete/{tenantid}")
 	public String deleteTenant(@PathVariable("tenantid") int tenantId) {
 		return service.deleteTenant(tenantId);
 	}
-
-	
 
 }

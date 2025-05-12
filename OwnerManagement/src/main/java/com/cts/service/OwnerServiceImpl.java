@@ -3,6 +3,8 @@ package com.cts.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,9 +27,12 @@ public class OwnerServiceImpl implements OwnerService {
 	OwnerRepository repository;
 	@Autowired
 	PropertyClient propertyClient;
+	Logger log = LoggerFactory.getLogger(OwnerServiceImpl.class);
 
+	// To save Owner
 	@Override
 	public String saveOwner(OwnerPropertyRequestDTO ownerProperty) {
+		log.info("In ownerServiceImpl saveownerproperty method...");
 		// Check if owner already exists
 		Optional<Owner> existingOwner = repository.findById(ownerProperty.getOwner().getOwnerId());
 
@@ -36,13 +41,6 @@ public class OwnerServiceImpl implements OwnerService {
 		}
 
 		repository.save(ownerProperty.getOwner());
-
-//		// Check if property already exists
-//		Optional<Property> existingProperty = propertyRepository.findById(ownerProperty.getProperty().getPropertyId());
-//
-//		if (existingProperty.isPresent()) {
-//			return "Owner and Property already Saved !!!"; // Keeps your return statement consistent
-//		}
 
 		String response = propertyClient.saveProperty(ownerProperty.getProperty());
 
@@ -53,8 +51,10 @@ public class OwnerServiceImpl implements OwnerService {
 		}
 	}
 
+	// To update Owner
 	@Override
 	public Owner updateOwner(Owner owner) {
+		log.info("In ownerServiceImpl updateowner method...");
 		return repository.save(owner);
 	}
 //	@Override
@@ -66,13 +66,18 @@ public class OwnerServiceImpl implements OwnerService {
 //		return responseDTO;
 //	}
 
+	// To get all Owner
 	@Override
 	public List<Owner> getAllOwner() {
+		log.info("In ownerServiceImpl getallproperty method...");
 		return repository.findAll();
 	}
 
+	// To delete Owner and property records
+	@Transactional
 	@Override
 	public String deleteOwnerAndProperties(int ownerId) {
+		log.info("In ownerServiceImpl deleteOwnerAndProperties method...");
 		List<Property> properties = propertyClient.getPropertiesByOwner(ownerId);
 		for (Property property : properties) {
 			propertyClient.deleteProperty(property.getPropertyId());
@@ -81,8 +86,10 @@ public class OwnerServiceImpl implements OwnerService {
 		return "Owner and all associated properties deleted!";
 	}
 
+	// To get Owner
 	@Override
 	public Owner getOwner(int ownerId) throws OwnerNotFoundException {
+		log.info("In ownerServiceImpl getOwner method...");
 		Optional<Owner> optional = repository.findById(ownerId);
 		if (optional.isPresent())
 			return optional.get();

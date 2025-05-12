@@ -10,14 +10,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class LeaseTenantRequestDTO {
-	
-
 
 	private Lease lease;
-	
-	private Tenant tenant;
-	
-	
 
+	private Tenant tenant;
 
 }

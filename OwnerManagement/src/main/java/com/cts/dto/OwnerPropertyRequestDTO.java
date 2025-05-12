@@ -13,11 +13,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class OwnerPropertyRequestDTO {
 	@Valid
-    @NotNull(message = "Owner information cannot be null")
-    private Owner owner;
+	@NotNull(message = "Owner information cannot be null")
+	private Owner owner;
 
-   @Valid
-   @NotNull(message = "Property information cannot be null")
-    private Property property;
-	
+	@Valid
+	@NotNull(message = "Property information cannot be null")
+	private Property property;
+
 }

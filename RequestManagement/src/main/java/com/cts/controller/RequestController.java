@@ -22,30 +22,35 @@ import jakarta.validation.Valid;
 @RestController
 @RequestMapping("/request")
 public class RequestController {
-	
+
 	@Autowired
 	RequestService service;
-	  
+
+	// To save request
 	@PostMapping("/save")
 	public ResponseEntity<String> saveRequest(@Valid @RequestBody Request request) {
 		return ResponseEntity.ok(service.saveRequest(request));
 	}
-	
+
+	// To update request
 	@PutMapping("/update")
 	public ResponseEntity<Request> updateRequest(@RequestBody Request request) {
 		return ResponseEntity.ok(service.updateRequest(request));
 	}
 
+	// To get request
 	@GetMapping("/fetchById/{requestid}")
 	public Request getRequest(@PathVariable("requestid") int requestId) throws RequestNotFound {
 		return service.getRequest(requestId);
 	}
 
+	// To get all request
 	@GetMapping("/fetchAll")
 	public List<Request> getAllRequest() {
 		return service.getAllRequest();
 	}
-	
+
+	// To delete request
 	@DeleteMapping("/delete/{requestid}")
 	public String deleteRequest(@PathVariable("requestid") int requestId) {
 		return service.deleteRequest(requestId);

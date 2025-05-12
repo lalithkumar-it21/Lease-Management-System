@@ -10,23 +10,19 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import com.cts.dto.Property;
-import com.cts.model.Owner;
 
-
-
-@FeignClient(name="PROPERTYLISTING",path="/property")
+@FeignClient(name = "PROPERTYLISTING", path = "/property")
 public interface PropertyClient {
+	// To save property
 	@PostMapping("/save")
 	public String saveProperty(@RequestBody Property property);
-	
-	@GetMapping("/propertiesByOwner/{ownerId}")//get list of property with same owner id for deletion
-    List<Property> getPropertiesByOwner(@PathVariable("ownerId") int ownerId);
-	
+
+	// To get property list
+	@GetMapping("/propertiesByOwner/{ownerId}") // get list of property with same owner id for deletion
+	List<Property> getPropertiesByOwner(@PathVariable("ownerId") int ownerId);
+
+	// To delete property
 	@DeleteMapping("/delete/{propertyId}")
-    String deleteProperty(@PathVariable("propertyId") int propertyId);
-	
-	
-//	@GetMapping("/fetchById/{propertyid}")
-//	public Property getPropertyById(@PathVariable("propertyid") int propertyId);
+	String deleteProperty(@PathVariable("propertyId") int propertyId);
 
 }

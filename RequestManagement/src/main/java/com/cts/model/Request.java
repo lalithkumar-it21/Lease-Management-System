@@ -18,19 +18,19 @@ import lombok.NoArgsConstructor;
 @Table(name = "request_info")
 public class Request {
 
-    @Id
-    @Min(value = 1, message = "Request ID must be greater than 0")
-    private int requestId;
+	@Id
+	@Min(value = 1, message = "Request ID must be greater than 0")
+	private int requestId;
 
-    @Min(value = 1, message = "Tenant ID must be greater than 0")
-    private int tenantId;
-    @Min(value = 1, message = "Owner ID must be greater than 0")
-    private int ownerId;
-    
-    @Min(value = 1, message = "Property ID must be greater than 0")
-    private int propertyId;
+	@Min(value = 1, message = "Tenant ID must be greater than 0")
+	private int tenantId;
+	@Min(value = 1, message = "Owner ID must be greater than 0")
+	private int ownerId;
 
-    @NotBlank(message = "Request status cannot be blank")
-    @Pattern(regexp = "PENDING|APPROVED|REJECTED", message = "Status must be PENDING OR APPROVED OR REJECTED")
-    private String requestStatus;
+	@Min(value = 1, message = "Property ID must be greater than 0")
+	private int propertyId;
+
+	@NotBlank(message = "Request status cannot be blank")
+	@Pattern(regexp = "PENDING|APPROVED|REJECTED", message = "Status must be PENDING OR APPROVED OR REJECTED")
+	private String requestStatus;
 }
