@@ -31,8 +31,8 @@ public class OwnerController {
 
 	// To save Owner
 	@PostMapping("/save")
-	public ResponseEntity<String> saveOwner(@Valid @RequestBody OwnerPropertyRequestDTO ownerProperty) {
-		return ResponseEntity.ok(service.saveOwner(ownerProperty));
+	public ResponseEntity<String> saveOwner(@Valid @RequestBody Owner owner) {
+		return ResponseEntity.ok(service.saveOwner(owner));
 	}
 
 	// To update Owner

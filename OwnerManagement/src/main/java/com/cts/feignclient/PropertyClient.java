@@ -13,9 +13,9 @@ import com.cts.dto.Property;
 
 @FeignClient(name = "PROPERTYLISTING", path = "/property")
 public interface PropertyClient {
-	// To save property
-	@PostMapping("/save")
-	public String saveProperty(@RequestBody Property property);
+//	// To save property
+//	@PostMapping("/save")
+//	public String saveProperty(@RequestBody Property property);
 
 	// To get property list
 	@GetMapping("/propertiesByOwner/{ownerId}") // get list of property with same owner id for deletion

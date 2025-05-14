@@ -37,7 +37,7 @@ public class RequestServiceImpl implements RequestService {
 		return "Request sent successfully";
 	}
 
-	// To gete request
+	// To get request
 	@Override
 	public Request getRequest(int requestId) throws RequestNotFound {
 		log.info("In RequestServiceImpl getrequest method...");

@@ -29,21 +29,19 @@ public class OwnerControllerTest {
 
     @Test
     void testSaveOwner() {
-        OwnerPropertyRequestDTO ownerProperty = new OwnerPropertyRequestDTO(
-            new Owner(1, "John Doe", "9876543210", "123 Street, City", 101),
-            null // Assuming property data is managed separately
-        );
-        when(ownerService.saveOwner(ownerProperty)).thenReturn("Owner and Property Saved !!!");
+        Owner owner = 
+            new Owner(1, "John Doe", "9876543210", "123 Street, City");
+        when(ownerService.saveOwner(owner)).thenReturn("Owner saved successfully");
 
-        ResponseEntity<String> response = ownerController.saveOwner(ownerProperty);
+        ResponseEntity<String> response = ownerController.saveOwner(owner);
 
-        assertEquals("Owner and Property Saved !!!", response.getBody());
-        verify(ownerService, times(1)).saveOwner(ownerProperty);
+        assertEquals("Owner saved successfully", response.getBody());
+        verify(ownerService, times(1)).saveOwner(owner);
     }
 
     @Test
     void testUpdateOwner() {
-        Owner owner = new Owner(1, "John Doe", "9876543210", "Updated Address", 101);
+        Owner owner = new Owner(1, "John Doe", "9876543210", "Updated Address");
         when(ownerService.updateOwner(owner)).thenReturn(owner);
 
         ResponseEntity<Owner> response = ownerController.updateOwner(owner);
@@ -54,7 +52,7 @@ public class OwnerControllerTest {
 
     @Test
     void testGetOwner() {
-        Owner owner = new Owner(1, "John Doe", "9876543210", "123 Street, City", 101);
+        Owner owner = new Owner(1, "John Doe", "9876543210", "123 Street, City");
         when(ownerService.getOwner(1)).thenReturn(owner);
 
         Owner response = ownerController.getOwner(1);
@@ -65,8 +63,8 @@ public class OwnerControllerTest {
 
     @Test
     void testGetAllOwners() {
-        Owner owner1 = new Owner(1, "John Doe", "9876543210", "123 Street, City", 101);
-        Owner owner2 = new Owner(2, "Jane Doe", "8765432109", "456 Avenue, City", 102);
+        Owner owner1 = new Owner(1, "John Doe", "9876543210", "123 Street, City");
+        Owner owner2 = new Owner(2, "Jane Doe", "8765432109", "456 Avenue, City");
         List<Owner> owners = Arrays.asList(owner1, owner2);
 
         when(ownerService.getAllOwner()).thenReturn(owners);

@@ -1,6 +1,7 @@
 package com.cts.model;
 
 import jakarta.persistence.Entity;
+
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Min;
@@ -22,7 +23,7 @@ public class Property {
     private int propertyId;
 
     @Min(value = 1, message = "Owner ID must be greater than 0")
-    private int ownerId; // Foreign Key reference
+    private int ownerId; 
 
     @NotBlank(message = "Address cannot be blank")
     private String address;

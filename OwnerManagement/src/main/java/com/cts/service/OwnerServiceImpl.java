@@ -31,24 +31,18 @@ public class OwnerServiceImpl implements OwnerService {
 
 	// To save Owner
 	@Override
-	public String saveOwner(OwnerPropertyRequestDTO ownerProperty) {
-		log.info("In ownerServiceImpl saveownerproperty method...");
-		// Check if owner already exists
-		Optional<Owner> existingOwner = repository.findById(ownerProperty.getOwner().getOwnerId());
+	public String saveOwner(Owner owner) {
+		log.info("In ownerServiceImpl saveowner method...");
+		
+		// Check if a request with the same owner ID already exists
+		Optional<Owner> existingOwner = repository.findById(owner.getOwnerId());
 
 		if (existingOwner.isPresent()) {
-			return "Owner and Property already Saved !!!"; // Keeps your return statement consistent
+			return "Owner with this ID already exists"; // Prevent duplicate insertion
 		}
 
-		repository.save(ownerProperty.getOwner());
-
-		String response = propertyClient.saveProperty(ownerProperty.getProperty());
-
-		if ("Property saved successfully".equals(response)) {
-			return "Owner and Property Saved !!!"; // Consistent return statement
-		} else {
-			return "Something went wrong!!!"; // No change here
-		}
+		repository.save(owner);
+		return "Owner saved successfully";
 	}
 
 	// To update Owner
@@ -57,14 +51,7 @@ public class OwnerServiceImpl implements OwnerService {
 		log.info("In ownerServiceImpl updateowner method...");
 		return repository.save(owner);
 	}
-//	@Override
-//	public OwnerPropertyResponseDTO getOwner(int ownerId) {
-//		Owner owner = repository.findById(ownerId).get();
-//		int propertyid = owner.getPropertyId();
-//		Property property = propertyClient.getPropertyById(propertyid);
-//		OwnerPropertyResponseDTO responseDTO = new OwnerPropertyResponseDTO(owner,property);
-//		return responseDTO;
-//	}
+
 
 	// To get all Owner
 	@Override
