@@ -34,7 +34,7 @@ public class RequestController {
 
 	// To update request
 	@PutMapping("/update")
-	public ResponseEntity<Request> updateRequest(@RequestBody Request request) {
+	public ResponseEntity<Request> updateRequest(@Valid @RequestBody Request request) {
 		return ResponseEntity.ok(service.updateRequest(request));
 	}
 
